@@ -148,41 +148,41 @@ let mySwiper3 = new Swiper(slider3, {
     }
 })
 let mySwiper4 = new Swiper(slider4, {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 50,
 
-        clickable: true,
-        slideToClickedSlide: true,
+    clickable: true,
+    slideToClickedSlide: true,
 
-        loop: true,
-        navigation: {
-            nextEl: '.nx',
-            prevEl: '.pr',
+    loop: true,
+    navigation: {
+        nextEl: '.nx',
+        prevEl: '.pr',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
         },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            // when window width is >= 480px
-            920: {
-                slidesPerView: 2,
-                spaceBetween: 40
-            },
-            // when window width is >= 640px
-            1200: {
-                slidesPerView: 2,
-                spaceBetween: 50
-            },
-            1600: {
-                slidesPerView: 3,
-                spaceBetween: 57
-            }
+        // when window width is >= 480px
+        920: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        },
+        // when window width is >= 640px
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 50
+        },
+        1600: {
+            slidesPerView: 3,
+            spaceBetween: 57
         }
-    })
-    // selekt
+    }
+})
+// selekt
 const element = document.querySelector('#selectCustom');
 const choices = new Choices(element, {
 
@@ -190,12 +190,12 @@ const choices = new Choices(element, {
 
 });
 // accordion
-$( function() {
- $('.accordion').accordion({
-     collapsible: true,
-      active: 0
-  
-});
+$(function () {
+    $('.accordion').accordion({
+        collapsible: true,
+        active: 0
+
+    });
 
 });
 
@@ -275,7 +275,7 @@ new JustValidate('.contacts__form', {
 });
 // socsety
 Share = {
-    vkontakte: function(purl, ptitle, pimg, text) {
+    vkontakte: function (purl, ptitle, pimg, text) {
         url = 'http://vkontakte.ru/share.php?';
         url += 'url=' + encodeURIComponent(purl);
         url += '&title=' + encodeURIComponent(ptitle);
@@ -284,7 +284,7 @@ Share = {
         url += '&noparse=true';
         Share.popup(url);
     },
-    facebook: function(purl, ptitle, pimg, text) {
+    facebook: function (purl, ptitle, pimg, text) {
         url = 'http://www.facebook.com/sharer.php?s=100';
         url += '&p[title]=' + encodeURIComponent(ptitle);
         url += '&p[summary]=' + encodeURIComponent(text);
@@ -292,7 +292,7 @@ Share = {
         url += '&p[images][0]=' + encodeURIComponent(pimg);
         Share.popup(url);
     },
-    instagram: function(purl, ptitle, pimg, text) {
+    instagram: function (purl, ptitle, pimg, text) {
         url = 'http://instagram.com/###?ref=badge';
         url += '&p[title]=' + encodeURIComponent(ptitle);
         url += '&p[summary]=' + encodeURIComponent(text);
@@ -300,13 +300,13 @@ Share = {
         url += '&p[images][0]=' + encodeURIComponent(pimg);
         Share.popup(url);
     },
-    popup: function(url) {
+    popup: function (url) {
         window.open(url, '', 'toolbar=0,status=0,width=626,height=436');
     }
 };
 // плавный скролл
-$(document).ready(function() {
-    $("a.header-first__list-link").click(function() {
+$(document).ready(function () {
+    $("a.header-first__list-link").click(function () {
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -315,8 +315,8 @@ $(document).ready(function() {
         return false;
     });
 });
-$(document).ready(function() {
-    $("a.hero__first-btn").click(function() {
+$(document).ready(function () {
+    $("a.hero__first-btn").click(function () {
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -327,158 +327,157 @@ $(document).ready(function() {
 });
 
 // смена активного художника
-document.querySelector('.catalog').addEventListener('click', function(e) {
+document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('artist__btn')) {
-         
-            this.querySelector('.artist_active').classList.remove('artist_active');
-            e.target.classList.add('artist_active');
-        }
-    
-    });
-  
-  document.querySelector('.catalog').addEventListener('click', function(e) {
+
+        this.querySelector('.artist_active').classList.remove('artist_active');
+        e.target.classList.add('artist_active');
+    }
+
+});
+
+document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('artist__btn1')) {
-         
-            this.querySelector('.artist_active1').classList.remove('artist_active1');
-            e.target.classList.add('artist_active1');
-        }
-    
-    });
-    document.querySelector('.catalog').addEventListener('click', function(e) {
+
+        this.querySelector('.artist_active1').classList.remove('artist_active1');
+        e.target.classList.add('artist_active1');
+    }
+
+});
+document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('artist__btn2')) {
-         
-            this.querySelector('.artist_active2').classList.remove('artist_active2');
-            e.target.classList.add('artist_active2');
-        }
-    
-    });
-    document.querySelector('.catalog').addEventListener('click', function(e) {
+
+        this.querySelector('.artist_active2').classList.remove('artist_active2');
+        e.target.classList.add('artist_active2');
+    }
+
+});
+document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('artist__btn3')) {
-         
-            this.querySelector('.artist_active3').classList.remove('artist_active3');
-            e.target.classList.add('artist_active3');
-        }
-    
-    });
-    document.querySelector('.catalog').addEventListener('click', function(e) {
+
+        this.querySelector('.artist_active3').classList.remove('artist_active3');
+        e.target.classList.add('artist_active3');
+    }
+
+});
+document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('artist__btn4')) {
-         
-            this.querySelector('.artist_active4').classList.remove('artist_active4');
-            e.target.classList.add('artist_active4');
-        }
-    
-    });
-        // флаги
-document.querySelector('.catalog').addEventListener('click', function(e) {
-if (e.target.classList.contains('catalog__flag-tab')) {
-     
+
+        this.querySelector('.artist_active4').classList.remove('artist_active4');
+        e.target.classList.add('artist_active4');
+    }
+
+});
+// флаги
+document.querySelector('.catalog').addEventListener('click', function (e) {
+    if (e.target.classList.contains('catalog__flag-tab')) {
+
         this.querySelector('.flag_active').classList.remove('flag_active');
         e.target.classList.add('flag_active');
     }
 
 });
 // смена картинок
-document.querySelectorAll('.artist').forEach(function(tabsBtn) {
-    tabsBtn.addEventListener('click', function(event) {
-    
-      const text = event.currentTarget.dataset.text
-      document.querySelectorAll('.l_image').forEach(function(tabContent) {
-         tabContent.classList.remove('l_image_active') 
-     })
-    document.querySelector(`[data-img="${text}"]`).classList.add('l_image_active')                      
-               })
-    });
+document.querySelectorAll('.artist').forEach(function (tabsBtn) {
+    tabsBtn.addEventListener('click', function (event) {
 
-    document.querySelectorAll('.artist1').forEach(function(tabsBtn1) {
-        tabsBtn1.addEventListener('click', function(event) {
-        
-          const text1 = event.currentTarget.dataset.text1
-          document.querySelectorAll('.l_image1').forEach(function(tabContent1) {
-             tabContent1.classList.remove('l_image_active1') 
-         })
-        document.querySelector(`[data-img1="${text1}"]`).classList.add('l_image_active1')                      
-                   })
-        });
+        const text = event.currentTarget.dataset.text
+        document.querySelectorAll('.l_image').forEach(function (tabContent) {
+            tabContent.classList.remove('l_image_active')
+        })
+        document.querySelector(`[data-img="${text}"]`).classList.add('l_image_active')
+    })
+});
 
-        document.querySelectorAll('.artist2').forEach(function(tabsBtn2) {
-            tabsBtn2.addEventListener('click', function(event) {
-            
-              const text2 = event.currentTarget.dataset.text2
-              document.querySelectorAll('.l_image2').forEach(function(tabContent2) {
-                 tabContent2.classList.remove('l_image_active2') 
-             })
-            document.querySelector(`[data-img2="${text2}"]`).classList.add('l_image_active2')                      
-                       })
-            });
+document.querySelectorAll('.artist1').forEach(function (tabsBtn1) {
+    tabsBtn1.addEventListener('click', function (event) {
 
-            document.querySelectorAll('.artist3').forEach(function(tabsBtn3) {
-                tabsBtn3.addEventListener('click', function(event) {
-                
-                  const text3 = event.currentTarget.dataset.text3
-                  document.querySelectorAll('.l_image3').forEach(function(tabContent3) {
-                     tabContent3.classList.remove('l_image_active3') 
-                 })
-                document.querySelector(`[data-img3="${text3}"]`).classList.add('l_image_active3')                      
-                           })
-                });
+        const text1 = event.currentTarget.dataset.text1
+        document.querySelectorAll('.l_image1').forEach(function (tabContent1) {
+            tabContent1.classList.remove('l_image_active1')
+        })
+        document.querySelector(`[data-img1="${text1}"]`).classList.add('l_image_active1')
+    })
+});
 
-                document.querySelectorAll('.artist4').forEach(function(tabsBtn4) {
-                    tabsBtn4.addEventListener('click', function(event) {
-                    
-                      const text4 = event.currentTarget.dataset.text4
-                      document.querySelectorAll('.l_image4').forEach(function(tabContent4) {
-                         tabContent4.classList.remove('l_image_active4') 
-                     })
-                    document.querySelector(`[data-img4="${text4}"]`).classList.add('l_image_active4')                      
-                               })
-                    });
+document.querySelectorAll('.artist2').forEach(function (tabsBtn2) {
+    tabsBtn2.addEventListener('click', function (event) {
+
+        const text2 = event.currentTarget.dataset.text2
+        document.querySelectorAll('.l_image2').forEach(function (tabContent2) {
+            tabContent2.classList.remove('l_image_active2')
+        })
+        document.querySelector(`[data-img2="${text2}"]`).classList.add('l_image_active2')
+    })
+});
+
+document.querySelectorAll('.artist3').forEach(function (tabsBtn3) {
+    tabsBtn3.addEventListener('click', function (event) {
+
+        const text3 = event.currentTarget.dataset.text3
+        document.querySelectorAll('.l_image3').forEach(function (tabContent3) {
+            tabContent3.classList.remove('l_image_active3')
+        })
+        document.querySelector(`[data-img3="${text3}"]`).classList.add('l_image_active3')
+    })
+});
+
+document.querySelectorAll('.artist4').forEach(function (tabsBtn4) {
+    tabsBtn4.addEventListener('click', function (event) {
+
+        const text4 = event.currentTarget.dataset.text4
+        document.querySelectorAll('.l_image4').forEach(function (tabContent4) {
+            tabContent4.classList.remove('l_image_active4')
+        })
+        document.querySelector(`[data-img4="${text4}"]`).classList.add('l_image_active4')
+    })
+});
 // Бургер меню
-document.querySelector('#burger').addEventListener('click', function() {
+document.querySelector('#burger').addEventListener('click', function () {
     document.querySelector('#menu').classList.toggle('is-active')
 
 })
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     $(".header-first__menu").hide();
-    $(".header-first__burger").click(function() {
-        $(".header-first__menu").slideToggle("slow", function() {
+    $(".header-first__burger").click(function () {
+        $(".header-first__menu").slideToggle("slow", function () {
 
 
         });
     });
 });
 //  Табы
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.catalog__flag-tab').forEach(function(tabsBtn) {
-        tabsBtn.addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.catalog__flag-tab').forEach(function (tabsBtn) {
+        tabsBtn.addEventListener('click', function (event) {
             const path = event.currentTarget.dataset.path
-            document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+            document.querySelectorAll('.tab-content').forEach(function (tabContent) {
                 tabContent.classList.remove('tab-content-active')
             })
             document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
-        $( '.accordion' ).accordion( 'refresh' );
+            $('.accordion').accordion('refresh');
         })
     })
 
 });
 // кнопкка все события
-jQuery(document).ready(function($)
-{
-  
-  $(".event__spol").click(function(){
-		
-	let $eventSpol = $(this);
-	
-	$("#spol").stop().slideToggle(300,function(){ 
-		if ($eventSpol.is('.open-button')){ 
-			$eventSpol.text("Свернуть").removeClass('open-button'); 
-		} else {
-			$eventSpol.text("Все события").addClass('open-button'); 
-		}
-	});
-    
-  });  
-  
+jQuery(document).ready(function ($) {
+
+    $(".event__spol").click(function () {
+
+        let $eventSpol = $(this);
+
+        $("#spol").stop().slideToggle(300, function () {
+            if ($eventSpol.is('.open-button')) {
+                $eventSpol.text("Свернуть").removeClass('open-button');
+            } else {
+                $eventSpol.text("Все события").addClass('open-button');
+            }
+        });
+
+    });
+
 });
