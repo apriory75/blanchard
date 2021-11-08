@@ -806,7 +806,7 @@ input[type="search"]::placeholder {
     display: flex;
     padding-bottom: 30px;
     align-items: flex-end;
-    margin-right: 969px;
+   
 }
 
 .swiper-pagination-fraction {
