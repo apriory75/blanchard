@@ -1392,6 +1392,7 @@ input[type="search"]::placeholder {
     height: 165px;
     background-color: #B7B7B7;
 }
+
 .catalog__accord-text {
     line-height: 32px;
     font-weight: 400;
@@ -1399,7 +1400,47 @@ input[type="search"]::placeholder {
     margin: 0;
     padding-left: 0;
 }
-
+.text-plug {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 251px;
+    height: 165px;
+    background-color: #B7B7B7;
+}
+.text-cup {
+    display: inline-block;
+    position: relative;
+   
+    width: 275px;
+    height: 189px;
+    border: 2px solid #B7B7B7;
+}
+.text-plug_description {
+    padding-top: 10px;
+    display: block;
+    width: 275px;
+    padding-left: 36px;
+}
+.text-plug_title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.text-plug_describe {
+width: 275px;
+font-size: 16px;
+line-height: 22px;
+color: #333333;
+}
+.text-plug_link {
+    color: #9D5CD0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+}
 .artist,
 .artist1,
 .artist2,
