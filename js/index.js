@@ -193,7 +193,8 @@ const choices = new Choices(element, {
 $(function () {
     $('.accordion').accordion({
         collapsible: true,
-        active: 0
+        active: 0,
+        heightStyle: 'content'
 
     });
 
