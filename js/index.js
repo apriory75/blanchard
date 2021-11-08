@@ -23,7 +23,7 @@ let mySwiper1 = new Swiper(slider1, {
     //   autoplay: {
     //     delay: 5000,
     //   },
-    loop: true,
+    loop: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -74,7 +74,7 @@ let mySwiper2 = new Swiper(slider2, {
     //   autoplay: {
     //     delay: 5000,
     //   },
-    loop: true,
+    loop: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -382,10 +382,10 @@ document.querySelectorAll('.artist').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
 
         const text = event.currentTarget.dataset.text
-        document.querySelectorAll('.l_image').forEach(function (tabContent) {
-            tabContent.classList.remove('l_image_active')
+        document.querySelectorAll('.catalog__block-image').forEach(function (tabContent) {
+            tabContent.classList.remove('catalog__block-image_active')
         })
-        document.querySelector(`[data-img="${text}"]`).classList.add('l_image_active')
+        document.querySelector(`[data-img="${text}"]`).classList.add('catalog__block-image_active')
     })
 });
 
@@ -393,10 +393,10 @@ document.querySelectorAll('.artist1').forEach(function (tabsBtn1) {
     tabsBtn1.addEventListener('click', function (event) {
 
         const text1 = event.currentTarget.dataset.text1
-        document.querySelectorAll('.l_image1').forEach(function (tabContent1) {
-            tabContent1.classList.remove('l_image_active1')
+        document.querySelectorAll('.catalog__block-image1').forEach(function (tabContent1) {
+            tabContent1.classList.remove('catalog__block-image_active1')
         })
-        document.querySelector(`[data-img1="${text1}"]`).classList.add('l_image_active1')
+        document.querySelector(`[data-img1="${text1}"]`).classList.add('catalog__block-image_active1')
     })
 });
 
@@ -404,10 +404,10 @@ document.querySelectorAll('.artist2').forEach(function (tabsBtn2) {
     tabsBtn2.addEventListener('click', function (event) {
 
         const text2 = event.currentTarget.dataset.text2
-        document.querySelectorAll('.l_image2').forEach(function (tabContent2) {
-            tabContent2.classList.remove('l_image_active2')
+        document.querySelectorAll('.catalog__block-image2').forEach(function (tabContent2) {
+            tabContent2.classList.remove('catalog__block-image_active2')
         })
-        document.querySelector(`[data-img2="${text2}"]`).classList.add('l_image_active2')
+        document.querySelector(`[data-img2="${text2}"]`).classList.add('catalog__block-image_active2')
     })
 });
 
@@ -415,10 +415,10 @@ document.querySelectorAll('.artist3').forEach(function (tabsBtn3) {
     tabsBtn3.addEventListener('click', function (event) {
 
         const text3 = event.currentTarget.dataset.text3
-        document.querySelectorAll('.l_image3').forEach(function (tabContent3) {
-            tabContent3.classList.remove('l_image_active3')
+        document.querySelectorAll('.catalog__block-image3').forEach(function (tabContent3) {
+            tabContent3.classList.remove('catalog__block-image_active3')
         })
-        document.querySelector(`[data-img3="${text3}"]`).classList.add('l_image_active3')
+        document.querySelector(`[data-img3="${text3}"]`).classList.add('catalog__block-image_active3')
     })
 });
 
@@ -426,10 +426,10 @@ document.querySelectorAll('.artist4').forEach(function (tabsBtn4) {
     tabsBtn4.addEventListener('click', function (event) {
 
         const text4 = event.currentTarget.dataset.text4
-        document.querySelectorAll('.l_image4').forEach(function (tabContent4) {
-            tabContent4.classList.remove('l_image_active4')
+        document.querySelectorAll('.catalog__block-image4').forEach(function (tabContent4) {
+            tabContent4.classList.remove('catalog__block-image_active4')
         })
-        document.querySelector(`[data-img4="${text4}"]`).classList.add('l_image_active4')
+        document.querySelector(`[data-img4="${text4}"]`).classList.add('catalog__block-image_active4')
     })
 });
 // Бургер меню
