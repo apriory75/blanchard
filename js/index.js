@@ -328,47 +328,56 @@ $(document).ready(function () {
 });
 
 // смена активного художника
-document.querySelector('.catalog').addEventListener('click', function (e) {
-    if (e.target.classList.contains('artist__btn')) {
+document.querySelectorAll('.artist__btn').forEach(el => {
+    el.addEventListener('click', (e) => { 
+    document.querySelectorAll('.tab-content-active .artist__btn').forEach(el => {el.classList.remove('artist_active')}); 
+    e.currentTarget.classList.add('artist_active');
+    
+    });
+    
+    });
+ 
+// document.querySelector('.catalog').addEventListener('click', function (e) {
+//     if (e.target.classList.contains('artist__btn')) {
 
-        this.querySelector('.artist_active').classList.remove('artist_active');
-        e.target.classList.add('artist_active');
-    }
+//         this.querySelector('.artist_active').classList.remove('artist_active');
+//         e.target.classList.add('artist_active');
+//     }
 
-});
+// });
 
-document.querySelector('.catalog').addEventListener('click', function (e) {
-    if (e.target.classList.contains('artist__btn1')) {
+// document.querySelector('.catalog').addEventListener('click', function (e) {
+//     if (e.target.classList.contains('artist__btn1')) {
 
-        this.querySelector('.artist_active1').classList.remove('artist_active1');
-        e.target.classList.add('artist_active1');
-    }
+//         this.querySelector('.artist_active1').classList.remove('artist_active1');
+//         e.target.classList.add('artist_active1');
+//     }
 
-});
-document.querySelector('.catalog').addEventListener('click', function (e) {
-    if (e.target.classList.contains('artist__btn2')) {
+// });
+// document.querySelector('.catalog').addEventListener('click', function (e) {
+//     if (e.target.classList.contains('artist__btn2')) {
 
-        this.querySelector('.artist_active2').classList.remove('artist_active2');
-        e.target.classList.add('artist_active2');
-    }
+//         this.querySelector('.artist_active2').classList.remove('artist_active2');
+//         e.target.classList.add('artist_active2');
+//     }
 
-});
-document.querySelector('.catalog').addEventListener('click', function (e) {
-    if (e.target.classList.contains('artist__btn3')) {
+// });
+// document.querySelector('.catalog').addEventListener('click', function (e) {
+//     if (e.target.classList.contains('artist__btn3')) {
 
-        this.querySelector('.artist_active3').classList.remove('artist_active3');
-        e.target.classList.add('artist_active3');
-    }
+//         this.querySelector('.artist_active3').classList.remove('artist_active3');
+//         e.target.classList.add('artist_active3');
+//     }
 
-});
-document.querySelector('.catalog').addEventListener('click', function (e) {
-    if (e.target.classList.contains('artist__btn4')) {
+// });
+// document.querySelector('.catalog').addEventListener('click', function (e) {
+//     if (e.target.classList.contains('artist__btn4')) {
 
-        this.querySelector('.artist_active4').classList.remove('artist_active4');
-        e.target.classList.add('artist_active4');
-    }
+//         this.querySelector('.artist_active4').classList.remove('artist_active4');
+//         e.target.classList.add('artist_active4');
+//     }
 
-});
+// });
 // флаги
 document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('catalog__flag-tab')) {
@@ -379,60 +388,18 @@ document.querySelector('.catalog').addEventListener('click', function (e) {
 
 });
 // смена картинок
-document.querySelectorAll('.artist').forEach(function (tabsBtn) {
+document.querySelectorAll('.artist__btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
 
         const text = event.currentTarget.dataset.text
-        document.querySelectorAll('.catalog__block-image').forEach(function (tabContent) {
+        document.querySelectorAll('.tab-content-active .catalog__block-image').forEach(function (tabContent) {
             tabContent.classList.remove('catalog__block-image_active')
         })
-        document.querySelector(`[data-img="${text}"]`).classList.add('catalog__block-image_active')
+        document.querySelector(`.tab-content-active [data-img="${text}"]`).classList.add('catalog__block-image_active')
     })
 });
 
-document.querySelectorAll('.artist1').forEach(function (tabsBtn1) {
-    tabsBtn1.addEventListener('click', function (event) {
-
-        const text1 = event.currentTarget.dataset.text1
-        document.querySelectorAll('.catalog__block-image1').forEach(function (tabContent1) {
-            tabContent1.classList.remove('catalog__block-image_active1')
-        })
-        document.querySelector(`[data-img1="${text1}"]`).classList.add('catalog__block-image_active1')
-    })
-});
-
-document.querySelectorAll('.artist2').forEach(function (tabsBtn2) {
-    tabsBtn2.addEventListener('click', function (event) {
-
-        const text2 = event.currentTarget.dataset.text2
-        document.querySelectorAll('.catalog__block-image2').forEach(function (tabContent2) {
-            tabContent2.classList.remove('catalog__block-image_active2')
-        })
-        document.querySelector(`[data-img2="${text2}"]`).classList.add('catalog__block-image_active2')
-    })
-});
-
-document.querySelectorAll('.artist3').forEach(function (tabsBtn3) {
-    tabsBtn3.addEventListener('click', function (event) {
-
-        const text3 = event.currentTarget.dataset.text3
-        document.querySelectorAll('.catalog__block-image3').forEach(function (tabContent3) {
-            tabContent3.classList.remove('catalog__block-image_active3')
-        })
-        document.querySelector(`[data-img3="${text3}"]`).classList.add('catalog__block-image_active3')
-    })
-});
-
-document.querySelectorAll('.artist4').forEach(function (tabsBtn4) {
-    tabsBtn4.addEventListener('click', function (event) {
-
-        const text4 = event.currentTarget.dataset.text4
-        document.querySelectorAll('.catalog__block-image4').forEach(function (tabContent4) {
-            tabContent4.classList.remove('catalog__block-image_active4')
-        })
-        document.querySelector(`[data-img4="${text4}"]`).classList.add('catalog__block-image_active4')
-    })
-});
+// 
 // Бургер меню
 document.querySelector('#burger').addEventListener('click', function () {
     document.querySelector('#menu').classList.toggle('is-active')
