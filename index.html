@@ -223,10 +223,10 @@
 
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
-                <h2 class="about__title">
-                    <a id="about"></a>О нас</h2>
+                <h2 class="section__title">
+                    О нас</h2>
                 <p class="about__text">
                     Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет
                     каждого участника как способного принимать собственные решения касаемо распределения внутренних
@@ -241,11 +241,11 @@
                 </p>
             </div>
         </section>
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <div class="container gallery_container">
                 <div class="gallery__block">
-                    <h2 class="gallery__title">
-                        <a id="gallery"></a>Галерея</h2>
+                    <h2 class="section__title gallery__title">
+                        Галерея</h2>
                     <div class="gallery__filtr">Фильтровать по:</div>
                     <div class="gallery__select">
                         <select name="select" id="selectCustom">
@@ -311,11 +311,11 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
             <div class="container">
                 <div class="catalog__img">
-                    <h2 class="catalog__title">
-                        <a id="catalog"></a>Каталог
+                    <h2 class="section__title">
+                        Каталог
                     </h2>
                     <ul class="catalog__flags">
                         <li class="catalog__flags-item"><button class="catalog__flag-tab flag_france" title="Франция" data-path="1"></button></li>
@@ -2058,11 +2058,11 @@
 
             </div>
         </section>
-        <section class="event">
+        <section class="event" id="event">
             <div class="container">
-                <h2 class="event__title">
-                    <a id="event"></a>События</h2>
-                <ul class="event__block">
+                <h2 class="section__title">
+                    События</h2>
+                <ul class="event__block list">
                     <li class="event__book">
 
                         <img src="img/101.jpg" alt="Обложка" class="event__book-img">
@@ -2120,11 +2120,8 @@
                             <a href="/" class="event__btn-link">Подробнее</a>
                         </div>
                     </li>
-                </ul>
-
-
-                <div id="spol" class="event__book-hide">
-                    <ul class="event__book-hide-spoiler">
+                    
+              
                         <li class="event__book">
                             <img src="img/104.jpg" alt="Обложка" class="event__book-img">
                             <div class="event__content">
@@ -2158,19 +2155,19 @@
                                 <a href="/" class="event__btn-link">Подробнее</a>
                             </div>
                         </li>
-                    </ul>
-                </div>
-                <div class="event__hide-btn event__spol open-button" tabindex="0">
-                    Все события</div>
+                   
+                     </ul>
+                     <button class="show_hide_list">Все события</button>
+                 
 
-
-            </div>
+</div>
+           
         </section>
-        <section class="publish">
+        <section class="publish" id="publish">
             <div class="container publish-container">
                 <div class="publish__block">
-                    <h2 class="publish__title">
-                        <a id="publish"></a>Издания</h2>
+                    <h2 class="section__title publish__title">
+                        Издания</h2>
                     <h3 class="publish__check-title">Категории</h3>
                     <ul>
                         <li>
@@ -2279,16 +2276,16 @@
 
                             <span class="price1">до</span>
                             <input type="search" placeholder="25000" class="publish__price-input price2">
-                            <span class="price1">рублей</span>
+                            <span class="price1">руб.</span>
 
                         </div>
                     </div>
                 </div>
                 <div class="publish__gallery">
                     <div class="publish__top-btn">
-                        <button class="swiper-button-prev"></button>
+                        <button class="swiper-button-prev pr1"></button>
                         <div class="swiper-pagination pag-2"></div>
-                        <button class="swiper-button-next"></button>
+                        <button class="swiper-button-next nx1"></button>
                     </div>
                     <div class="swiper-container3">
 
@@ -2398,10 +2395,11 @@
                 </div>
             </div>
         </section>
-        <section class="proyect">
+
+        <section class="proyect" id="proyect">
             <div class="container">
-                <h2 class="proyect__title">
-                    <a id="proyect"></a>Проекты</h2>
+                <h2 class="section__title">
+                    Проекты</h2>
 
                 <p class="proyect__text">
                     Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
@@ -2446,22 +2444,26 @@
             </div>
         </section>
 
-        <section class="contacts">
-            <h2 class="contacts__title">
-                <a id="contacts"></a>Контакты</h2>
+        <section class="contacts" id="contacts">
+            <div class="container">
+            <h2 class="section__title">
+                Контакты</h2>
+                </div>
             <div class="contacts__block">
 
                 <div class="contacts__list">
                     <h3 class="contacts__name">Шоурум №4
                     </h3>
                     <p class="contacts__adress">
-                        Леонтьевский переулок, дом 5, строение 1</p>
+                        Леонтьевский переулок, дом 5/1</p>
                     <h3 class="contacts__app">Заказать обратный звонок</h3>
                     <form action="/" class="contacts__form">
+                        <div class="contacts__label">
                         <input class="contacts__input-name" type="text" name="Имя" placeholder="Имя*"
-                            data-validate-field="name">
+                            data-validate-field="name"></div>
+                            <div class="contacts__label">
                         <input type="tel" class="contacts__input-name" name="Телефон" placeholder="Телефон*"
-                            data-validate-field="tel" data-validate-rules="phone">
+                            data-validate-field="tel" data-validate-rules="phone"></div>
                         <button class="contacts__btn">Заказать</button>
                     </form>
                     <h3 class="contacts__app-title">Связаться в один клик</h3>
@@ -2507,6 +2509,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>

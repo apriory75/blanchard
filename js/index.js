@@ -117,10 +117,10 @@ let mySwiper3 = new Swiper(slider3, {
         clickable: true,
         slideToClickedSlide: true,
     },
-    loop: true,
+    loop: false,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.nx1',
+        prevEl: '.pr1',
     },
     // autoplay: {
     //     delay: 5000,
@@ -337,47 +337,7 @@ document.querySelectorAll('.artist__btn').forEach(el => {
     
     });
  
-// document.querySelector('.catalog').addEventListener('click', function (e) {
-//     if (e.target.classList.contains('artist__btn')) {
 
-//         this.querySelector('.artist_active').classList.remove('artist_active');
-//         e.target.classList.add('artist_active');
-//     }
-
-// });
-
-// document.querySelector('.catalog').addEventListener('click', function (e) {
-//     if (e.target.classList.contains('artist__btn1')) {
-
-//         this.querySelector('.artist_active1').classList.remove('artist_active1');
-//         e.target.classList.add('artist_active1');
-//     }
-
-// });
-// document.querySelector('.catalog').addEventListener('click', function (e) {
-//     if (e.target.classList.contains('artist__btn2')) {
-
-//         this.querySelector('.artist_active2').classList.remove('artist_active2');
-//         e.target.classList.add('artist_active2');
-//     }
-
-// });
-// document.querySelector('.catalog').addEventListener('click', function (e) {
-//     if (e.target.classList.contains('artist__btn3')) {
-
-//         this.querySelector('.artist_active3').classList.remove('artist_active3');
-//         e.target.classList.add('artist_active3');
-//     }
-
-// });
-// document.querySelector('.catalog').addEventListener('click', function (e) {
-//     if (e.target.classList.contains('artist__btn4')) {
-
-//         this.querySelector('.artist_active4').classList.remove('artist_active4');
-//         e.target.classList.add('artist_active4');
-//     }
-
-// });
 // флаги
 document.querySelector('.catalog').addEventListener('click', function (e) {
     if (e.target.classList.contains('catalog__flag-tab')) {
@@ -432,20 +392,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 // кнопкка все события
-jQuery(document).ready(function ($) {
 
-    $(".event__spol").click(function () {
-
-        let $eventSpol = $(this);
-
-        $("#spol").stop().slideToggle(300, function () {
-            if ($eventSpol.is('.open-button')) {
-                $eventSpol.text("Свернуть").removeClass('open-button');
-            } else {
-                $eventSpol.text("Все события").addClass('open-button');
-            }
-        });
-
+jQuery(document).ready(function($){
+    if($('ul.list').find('li').length > 4){
+    $('.show_hide_list').click(function(){
+    $('ul.list li:nth-child(n+4)').slideToggle('');
+    $(this).toggleClass('opnd_g');
+    if($(this).hasClass('opnd_g')){
+    $(this).html('Свернуть');}
+    else {$(this).html('Все события');}
     });
-
-});
+    }else{$('.show_hide_list').hide();}
+    });
