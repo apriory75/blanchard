@@ -109,7 +109,7 @@ let mySwiper2 = new Swiper(slider2, {
 
 let mySwiper3 = new Swiper(slider3, {
     slidesPerView: 3,
-    slidesPerGroup: 1,
+    slidesPerGroup: 3,
     spaceBetween: 50,
     pagination: {
         el: '.pag-2',
@@ -395,12 +395,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 jQuery(document).ready(function($){
     if($('ul.list').find('li').length > 4){
-    $('.show_hide_list').click(function(){
+    $('.event__hide_btn').click(function(){
     $('ul.list li:nth-child(n+4)').slideToggle('');
     $(this).toggleClass('opnd_g');
     if($(this).hasClass('opnd_g')){
     $(this).html('Свернуть');}
     else {$(this).html('Все события');}
     });
-    }else{$('.show_hide_list').hide();}
+    }else{$('.event__hide_btn').hide();}
     });
