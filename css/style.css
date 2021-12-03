@@ -1815,7 +1815,7 @@ ul.list li:nth-child(n+4){
     opacity: 0.5;
     padding-left: 11px;
     padding-right: 10px;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     white-space: nowrap;
 }
 .price2:hover {
